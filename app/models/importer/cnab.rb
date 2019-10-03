@@ -14,7 +14,7 @@ module Importer
 
     def parse_line(line)
       event = Event.new
-      event.type = line[0].to_i
+      event.event_type = line[0].to_i
       event.event_time = "#{line[1..8]}#{line[42..47]}"
       event.value = line[9..18].to_f / 100
       event.document = line[19..29]

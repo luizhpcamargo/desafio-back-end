@@ -7,7 +7,7 @@ RSpec.describe Event, type: :model do
 
   it do
     event.type = 1
-    expect(event.type).to eq 'debt'
+    expect(event.event_type).to eq 'debt'
     expect(event).to be_invalid
     event.document = '1'
     expect(event).to be_invalid
