@@ -1,0 +1,30 @@
+
+<h1>Eventos</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col">Tipo</th>
+      <th class="col">Entrada?</th>
+      <th class="col">Loja</th>
+      <th class="col">Dono</th>
+	    <th class="col">CPF</th>
+      <th class="col">Cartão</th>
+      <th class="col">Data</th>
+      <th class="col">Valor</th>
+	  </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+
+        <td class="row"><%= event.event_type %></td>
+        <td class="row"><%= event.incoming? %></td>
+        <td class="row"><%= event.store.name %></td>
+        <td class="row"><%= event.store.owner %></td>
+        <td class="row"><%= event.document %></td>
+        <td class="row"><%= event.card %></td>
+        <td class="row"><%= event.event_time %></td>
+        <td class="row"><%= event.formatted_value %></td>
+    <% end %>
+  </tbody>
+</table>
