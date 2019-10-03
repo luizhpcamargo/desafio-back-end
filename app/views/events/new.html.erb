@@ -1,0 +1,9 @@
+<h1>Nova importação</h1>
+
+<%= form_for Event.new, url: events_path do |f| %>
+  <%= f.label "Arquivo" %>
+  <%= f.file_field :file %>
+  <%= f.submit "Importar" %>
+<% end %>
+
+<%= link_to 'Voltar', events_path %>
